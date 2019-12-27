@@ -21,9 +21,13 @@ Route::get('/', function () {
 Route::get('video', function () {
     return view('video');
 });
+Route::get('category', function () {
+    return view('category');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('home', function () {
+    return view('home');
+});
 
 Route::get('cp-login', 'Auth\LoginController@loginForm')->name('login');
 Route::post('cp-login', 'Auth\LoginController@postLogin');
